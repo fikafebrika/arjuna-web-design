@@ -128,15 +128,15 @@
                     <div class="card-body">
                       <img
                         src="../assets/img/elements/12.jpg"
-                        class="img-fluid rounded mb-4"
-                        width="200"
+                        class="img-fluid rounded mb-3"
+                        width="175"
                         alt=""
                       />
-                      <h3 class="fw-bold">
+                      <h4 class="fw-bolder mb-2">
                         INDONESIAN JOURNAL OF ELECTRICAL ENGINEERING AND
                         COMPUTER SCIENCE
                         <i class="bx bxs-check-circle text-primary mb-1"></i>
-                      </h3>
+                      </h4>
                       <div class="d-flex mb-2 justify-content-center">
                         <div class="me-3">
                           <a href="#" class="text-primary">
@@ -165,7 +165,10 @@
                           </a>
                         </div>
                       </div>
-                      <div class="d-flex justify-content-center fw-semibold">
+                      <div
+                        class="d-flex justify-content-center fw-semibold"
+                        style="margin-top: -7px"
+                      >
                         <div class="mx-3">
                           <a href="#" class="text-body">
                             <i class="bx bxs-file-find text-primary mb-1"></i>
@@ -204,7 +207,7 @@
                         </div>
                       </div>
                       <div
-                        class="alert alert-primary mt-4 mb-0 d-flex justify-content-evenly"
+                        class="alert alert-primary mt-3 d-flex justify-content-evenly mb-3"
                         role="alert"
                       >
                         <div class="d-flex">
@@ -256,6 +259,16 @@
                           </div>
                         </div>
                       </div>
+                      <p class="card-text">
+                        Jurnal Mencurigakan? Silakan Lakukan
+                        <a
+                          href="#"
+                          class="text-decoration-underline fw-semibold text-warning"
+                          data-bs-toggle="modal"
+                          data-bs-target="#modalCenter"
+                          >Pengaduan Jurnal</a
+                        >
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -684,9 +697,76 @@
     <!-- / Layout wrapper -->
 
     <div class="buy-now">
-      <a href="#" target="_blank" class="btn btn-danger btn-buy-now"
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-danger btn-buy-now"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCenter"
         >Pengaduan Jurnal</a
       >
+    </div>
+
+    <!-- Modal Pengaduan Jurnal -->
+    <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCenterTitle">
+              Pengaduan Jurnal Mencurigakan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col mb-3">
+                <label for="nameWithTitle" class="form-label">Name</label>
+                <input
+                  type="text"
+                  id="nameWithTitle"
+                  class="form-control"
+                  placeholder="Enter Name"
+                />
+              </div>
+            </div>
+            <div class="row g-2">
+              <div class="col mb-0">
+                <label for="emailWithTitle" class="form-label">Email</label>
+                <input
+                  type="text"
+                  id="emailWithTitle"
+                  class="form-control"
+                  placeholder="xxxx@xxx.xx"
+                />
+              </div>
+              <div class="col mb-0">
+                <label for="dobWithTitle" class="form-label">DOB</label>
+                <input
+                  type="text"
+                  id="dobWithTitle"
+                  class="form-control"
+                  placeholder="DD / MM / YY"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Core JS -->
