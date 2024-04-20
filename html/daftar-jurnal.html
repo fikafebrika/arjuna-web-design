@@ -33,6 +33,8 @@
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="../assets/vendor/fonts/boxicons.css" />
+    <link rel="stylesheet" href="../assets/vendor/fonts/fontawesome.css" />
+    <link rel="stylesheet" href="../assets/vendor/fonts/flag-icons.css" />
 
     <!-- Core CSS -->
     <link
@@ -52,10 +54,10 @@
       rel="stylesheet"
       href="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
     />
-
+    <link rel="stylesheet" href="../assets/vendor/libs/select2/select2.css" />
     <link
       rel="stylesheet"
-      href="../assets/vendor/libs/apex-charts/apex-charts.css"
+      href="../assets/vendor/libs/bootstrap-select/bootstrap-select.css"
     />
 
     <!-- Page CSS -->
@@ -763,9 +765,120 @@
     <!-- / Layout wrapper -->
 
     <div class="buy-now">
-      <a href="#" target="_blank" class="btn btn-danger btn-buy-now"
+      <a
+        href="#"
+        target="_blank"
+        class="btn btn-danger btn-buy-now"
+        data-bs-toggle="modal"
+        data-bs-target="#modalCenter"
         >Pengaduan Jurnal</a
       >
+    </div>
+
+    <!-- Modal Pengaduan Jurnal -->
+    <div class="modal fade" id="modalCenter" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="modalCenterTitle">
+              Pengaduan Jurnal Mencurigakan
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col mb-3">
+                <label for="nameWithTitle" class="form-label">Nama Anda</label>
+                <input
+                  type="text"
+                  id="nameWithTitle"
+                  class="form-control"
+                  placeholder="Masukkan Nama Anda.."
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="nameWithTitle" class="form-label">Email Anda</label>
+                <input
+                  type="email"
+                  id="nameWithTitle"
+                  class="form-control"
+                  placeholder="Masukkan Email Anda.."
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="nameWithTitle" class="form-label"
+                  >Nama Jurnal</label
+                >
+                <input
+                  type="search"
+                  class="form-control"
+                  id="defaultFormControlInput"
+                  placeholder="Ketikkan Nama Jurnal.."
+                  aria-describedby="defaultFormControlHelp"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="select2Primary" class="form-label"
+                  >Pilih Kategori Pengaduan Jurnal</label
+                >
+                <div class="select2-primary">
+                  <select
+                    id="select2Primary"
+                    class="select2 form-select"
+                    multiple
+                    title="Pilih Kategori Pengaduan Jurnal"
+                    required
+                  >
+                    <option value="1">Tidak Ada Review Jurnal</option>
+                    <option value="2">Review Jurnal Terlalu Cepat</option>
+                    <option value="3">
+                      Ketidakwajaran Praktik APC (Article Processing Charge)
+                    </option>
+                    <option value="4">Jurnal Tidak Relevan</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label"
+                  >Komentar Terkait Jurnal (Jika Ada)</label
+                >
+                <textarea
+                  class="form-control"
+                  id="exampleFormControlTextarea1"
+                  rows="3"
+                  placeholder="Masukkan Komentar Lainnya Terkait Jurnal, Jika Ada"
+                ></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              data-bs-dismiss="modal"
+            >
+              Batal
+            </button>
+            <button type="button" class="btn btn-primary">Kirim</button>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Core JS -->
@@ -774,18 +887,24 @@
     <script src="../assets/vendor/libs/popper/popper.js"></script>
     <script src="../assets/vendor/js/bootstrap.js"></script>
     <script src="../assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
-
+    <script src="../assets/vendor/libs/typeahead-js/typeahead.js"></script>
     <script src="../assets/vendor/js/menu.js"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
-    <script src="../assets/vendor/libs/apex-charts/apexcharts.js"></script>
+    <script src="../assets/vendor/libs/select2/select2.js"></script>
+    <script src="../assets/vendor/libs/tagify/tagify.js"></script>
+    <script src="../assets/vendor/libs/bootstrap-select/bootstrap-select.js"></script>
+    <script src="../assets/vendor/libs/typeahead-js/typeahead.js"></script>
+    <script src="../assets/vendor/libs/bloodhound/bloodhound.js"></script>
 
     <!-- Main JS -->
     <script src="../assets/js/main.js"></script>
 
     <!-- Page JS -->
-    <script src="../assets/js/dashboards-analytics.js"></script>
+    <script src="../assets/js/forms-selects.js"></script>
+    <script src="../assets/js/forms-tagify.js"></script>
+    <script src="../assets/js/forms-typeahead.js"></script>
 
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
